@@ -12,7 +12,6 @@ const HeaderTop = () => {
       sx={{
         backgroundColor: theme.palette.secondary.main,
         py: 1,
-        fontWeight: "bold",
         color: theme.palette.textColorForBgSecondary.main,
       }}
     >
