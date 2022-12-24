@@ -1,9 +1,0 @@
-.showNav{
-  width: 100%;
-  transition: 0.3s linear;
-}
-.hideNav{
-  position: fixed;
-  top: -80px;
-  transition: 0.3s linear;
-}

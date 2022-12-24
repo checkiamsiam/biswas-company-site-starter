@@ -1,8 +1,7 @@
-import { AppBar, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import HeaderMain from "./HeaderMain";
 import HeaderTop from "./HeaderTop";
-import style from "../../styles/home.module.css";
 
 const Header = () => {
   const [hideness, setHideness] = useState(false);
@@ -18,12 +17,13 @@ const Header = () => {
     window.addEventListener("scroll", controlNavbar);
   }, []);
   return (
-    <div style={{ backgroundColor: "#E21F36" , position: "fixed" , top: hideness ? "-60px" : "0px" , transition: "0.3s linear" , width: "100%"}}>
+    <Stack
+      width="100%"
+      sx={{ backgroundColor: "#E21F36", position: "fixed", top: hideness ? { sm: "-60px", xs: "-100px" } : "0px", transition: "0.3s linear" }}
+    >
       <HeaderTop />
-      <div>
-        <HeaderMain />
-      </div>
-    </div>
+      <HeaderMain />
+    </Stack>
   );
 };
 
