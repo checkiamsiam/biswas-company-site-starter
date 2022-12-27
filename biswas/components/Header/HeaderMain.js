@@ -1,11 +1,12 @@
-import { Button, Link, useTheme, Hidden, IconButton , Stack , Container } from "@mui/material";
+import { Button, Link, useTheme, Hidden, IconButton, Stack, Container } from "@mui/material";
 import Image from "next/image";
 import logo from "../../assets/images/My project.png";
 import HeaderHambergerBody from "./HeaderHambergerBody";
 import { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
+import MyButton from "../common/MyButton";
 
-const HeaderMain = () => {
+const HeaderMain = ({ hideness }) => {
   const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -19,7 +20,8 @@ const HeaderMain = () => {
     <Container
       maxWidth="xl"
       sx={{
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: hideness ? theme.palette.primary.main : "transparent",
+        boxShadow: hideness ? 2 : 15,
         py: 2,
       }}
     >
@@ -30,7 +32,13 @@ const HeaderMain = () => {
             href="#"
             underline="none"
             color={theme.palette.textColorForBgSecondary.lightWhite}
-            sx={{ cursor: "pointer", fontSize: "35px", fontWeight: 700 , transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+            sx={{
+              cursor: "pointer",
+              fontSize: "35px",
+              fontWeight: 700,
+              transition: ".4s",
+              ":hover": { color: theme.palette.textColorForBgSecondary.main },
+            }}
           >
             Biswas
           </Link>
@@ -41,7 +49,13 @@ const HeaderMain = () => {
               href="#"
               underline="none"
               color={theme.palette.textColorForBgSecondary.lightWhite}
-              sx={{ cursor: "pointer", fontSize: "20px", transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+              sx={{
+                cursor: "pointer",
+                fontSize: "20px",
+                borderBottom: "3px solid transparent",
+                transition: ".4s",
+                ":hover": { color: theme.palette.textColorForBgSecondary.main, borderBottom: `3px solid ${theme.palette.secondary.main}` },
+              }}
             >
               Home
             </Link>
@@ -49,7 +63,17 @@ const HeaderMain = () => {
               href="#"
               underline="none"
               color={theme.palette.textColorForBgSecondary.lightWhite}
-              sx={{ cursor: "pointer", fontSize: "20px", transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+              sx={{
+                cursor: "pointer",
+                fontSize: "20px",
+                borderBottom: "3px solid transparent",
+                transition: ".4s",
+                ":hover": {
+                  color: theme.palette.textColorForBgSecondary.main,
+                  borderWidth: "100%",
+                  borderBottom: `3px solid ${theme.palette.secondary.main}`,
+                },
+              }}
             >
               About us
             </Link>
@@ -57,7 +81,13 @@ const HeaderMain = () => {
               href="#"
               underline="none"
               color={theme.palette.textColorForBgSecondary.lightWhite}
-              sx={{ cursor: "pointer", fontSize: "20px", transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+              sx={{
+                cursor: "pointer",
+                fontSize: "20px",
+                borderBottom: "3px solid transparent",
+                transition: ".4s",
+                ":hover": { color: theme.palette.textColorForBgSecondary.main, borderBottom: `3px solid ${theme.palette.secondary.main}` },
+              }}
             >
               Services
             </Link>
@@ -65,15 +95,27 @@ const HeaderMain = () => {
               href="#"
               underline="none"
               color={theme.palette.textColorForBgSecondary.lightWhite}
-              sx={{ cursor: "pointer", fontSize: "20px", transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+              sx={{
+                cursor: "pointer",
+                fontSize: "20px",
+                borderBottom: "3px solid transparent",
+                transition: ".4s",
+                ":hover": { color: theme.palette.textColorForBgSecondary.main, borderBottom: `3px solid ${theme.palette.secondary.main}` },
+              }}
             >
-              Team
+              Community
             </Link>
             <Link
               href="#"
               underline="none"
               color={theme.palette.textColorForBgSecondary.lightWhite}
-              sx={{ cursor: "pointer", fontSize: "20px", transition: ".4s", ":hover": { color: theme.palette.textColorForBgSecondary.main } }}
+              sx={{
+                cursor: "pointer",
+                fontSize: "20px",
+                borderBottom: "3px solid transparent",
+                transition: ".4s",
+                ":hover": { color: theme.palette.textColorForBgSecondary.main, borderBottom: `3px solid ${theme.palette.secondary.main}` },
+              }}
             >
               Contact
             </Link>
@@ -81,20 +123,7 @@ const HeaderMain = () => {
         </Hidden>
         <Hidden mdDown>
           <Stack>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: theme.palette.secondary.main,
-                py: "15px",
-                transition: ".4s",
-                px: "65px",
-                ":hover": {
-                  backgroundColor: "#FF5A00",
-                },
-              }}
-            >
-              Get Us
-            </Button>
+            <MyButton>Get Us</MyButton>
           </Stack>
         </Hidden>
         <Hidden mdUp>

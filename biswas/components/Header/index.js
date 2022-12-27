@@ -19,10 +19,10 @@ const Header = () => {
   return (
     <Stack
       width="100%"
-      sx={{ backgroundColor: "#E21F36", position: "fixed", top: hideness ? { sm: "-60px", xs: "-100px" } : "0px", transition: "0.3s linear" }}
+      sx={{ backgroundColor: "transparent", position: "fixed", top: hideness ? { sm: "-60px", xs: "-100px" } : "0px", transition: "0.3s linear" }}
     >
       <HeaderTop />
-      <HeaderMain />
+      <HeaderMain hideness={hideness} />
     </Stack>
   );
 };
