@@ -1,4 +1,4 @@
-import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Stack, Tab, Tabs, Typography, useTheme } from "@mui/material";
+import { Box, Container, Grid,  Stack, Tab,  Typography, useTheme } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import aboutImage from "../../assets/images/StockSnap_MJZPCHLERD-compressed.jpg";
 import Image from "next/image";
