@@ -2,6 +2,7 @@ import Head from "next/head";
 import HomeBlog from "../components/Home/Blog";
 import HomeAbout from "../components/Home/HomeAbout";
 import HomeBanner from "../components/Home/HomeBanner";
+import HomeContact from "../components/Home/HomeContact";
 import Services from "../components/Home/Services";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeBanner />
       <Services />
       <HomeAbout />
+      <HomeContact/>
       <HomeBlog/>
     </>
   );
