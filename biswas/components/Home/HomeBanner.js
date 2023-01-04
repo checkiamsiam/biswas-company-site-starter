@@ -9,7 +9,7 @@ const HomeBanner = () => {
   const theme = useTheme();
   return (
     <Container maxWidth="xl" className={style.setBg}>
-      <Stack direction="row" justifyContent="center" alignItems="center" minHeight="100vh" sx={{ paddingTop: "150px" }}>
+      <Stack direction="row" justifyContent="center" alignItems="center" minHeight="130vh">
         <Stack width={{ lg: "50%", xs: "100%" }}>
           <Stack direction="row" justifyContent="center">
             <Image src={logo} height="100" width="100" alt="logo" />

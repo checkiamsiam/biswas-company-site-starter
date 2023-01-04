@@ -23,6 +23,7 @@ const HeaderMain = ({ hideness }) => {
         backgroundColor: hideness ? theme.palette.primary.main : "transparent",
         boxShadow: hideness ? 2 : 15,
         py: 2,
+        
       }}
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center">

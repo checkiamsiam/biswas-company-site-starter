@@ -10,6 +10,7 @@ const MyButton = ({ children }) => {
         py: "15px",
         transition: ".4s",
         px: "65px",
+        zIndex: "1",
         ":hover": {
           backgroundColor: "#FF5A00",
         },

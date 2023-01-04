@@ -19,6 +19,7 @@ const Header = () => {
   return (
     <Stack
       width="100%"
+      zIndex={9999}
       sx={{ backgroundColor: "transparent", position: "fixed", top: hideness ? { sm: "-60px", xs: "-100px" } : "0px", transition: "0.3s linear" }}
     >
       <HeaderTop />
