@@ -18,8 +18,8 @@ export default function Home() {
       <Services />
       <HomeAbout />
       <HomeContact />
-      <HomeBlog />
       <Reviews />
+      <HomeBlog />
     </>
   );
 }

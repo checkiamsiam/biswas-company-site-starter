@@ -22,7 +22,7 @@ const HeaderMain = ({ hideness }) => {
       sx={{
         backgroundColor: hideness ? theme.palette.primary.main : "transparent",
         boxShadow: hideness ? 2 : 15,
-        py: 2,
+        py: 1,
         
       }}
     >

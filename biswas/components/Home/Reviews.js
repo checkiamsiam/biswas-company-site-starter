@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Button, Container, IconButton, Paper, Rating, Stack, Typography, useTheme } from "@mui/material";
+import { Box,  Container, Rating, Stack, Typography, useTheme } from "@mui/material";
 import style from "../../styles/home.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
@@ -56,7 +56,7 @@ function SliderItem({name}) {
       <Stack direction="row" justifyContent="center">
         <ReviewsIcon sx={{ fontSize: "100px", color: theme.palette.secondary.main }} />
       </Stack>
-      <Typography textAlign="center" color={theme.palette.textColorForBgSecondary.main} fontWeight="600" fontSize="20px" marginTop={{md: 2 , xs: 1}}>
+      <Typography textAlign="center" color={theme.palette.textColorForBgSecondary.main} fontWeight="500" fontSize="20px" marginTop={{md: 2 , xs: 1}}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio excepturi atque consectetur accusantium ipsum explicabo repellendus ipsa
         assumenda quibusdam, voluptatibus odio laborum eaque nemo. Tempora!
       </Typography>
