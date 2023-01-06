@@ -10,7 +10,6 @@ const HomeContact = () => {
       sx={{
         my: { md: 10, xs: 0 },
         py: { md: 10, xs: 5 } ,
-        width: "100%",
       }}
     >
       <Stack direction="row" justifyContent="center" alignItems="center">
