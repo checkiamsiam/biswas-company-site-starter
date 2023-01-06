@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CyberSecurity from "../components/Home/CyberSecurity";
 import HomeAbout from "../components/Home/HomeAbout";
 import HomeBanner from "../components/Home/HomeBanner";
 import Services from "../components/Home/Services";
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeBanner />
       <Services />
       <HomeAbout />
+      <CyberSecurity/>
     </>
   );
 }
