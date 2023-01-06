@@ -22,9 +22,8 @@ export default function Home() {
       <HomeContact />
       <CyberSecurity/>
       <HomeBlog />
-      <OurApproach/>
       <Reviews />
-      <HomeBlog />
+      <OurApproach/>
     </>
   );
 }

@@ -1,34 +1,18 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Card, Grid, Typography, useTheme } from "@mui/material";
 import { Container } from "@mui/system";
 import Image from "next/image";
 import React from "react";
 import approachImg from "../../assets/images/approach.png";
 
 const OurApproach = () => {
+  const theme = useTheme()
   return (
     <Container maxWidth="xl">
-      <Typography
-        component="p"
-        sx={{
-          fontSize: "18px",
-          color: "#e21f36",
-          textAlign: "center",
-          fontWeight: "bold",
-        }}
-      >
-        Our Approach
+      <Typography textAlign="center" color={theme.palette.secondary.main} fontWeight="700" fontSize="15px">
+      Our Approach
       </Typography>
-      <Typography
-        component="h4"
-        variant="h4"
-        sx={{
-          textAlign: "center",
-          fontWeight: "bold",
-          fontSize: "40px",
-          my: 2,
-        }}
-      >
-        To Enhance Your Cyber Defences Expert <br /> Will Support
+      <Typography textAlign="center" color={theme.palette.primary.main} fontWeight="700" fontSize={{ md: "40px", xs: "25px" }}>
+      To Enhance Web maintained experience
       </Typography>
       <Grid container spacing={5} >
         <Grid item lg={6} sx={{ my: 4 }}>
