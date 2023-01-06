@@ -4,3 +4,17 @@
   background-size: cover;
   background-position: center;
 }
+
+.setBgInContact {
+  background-image: url("../assets/images/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.setBgInReview{
+  background-image: url("../assets/images/ReviewBd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
