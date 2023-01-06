@@ -1,16 +1,28 @@
-import { Container, IconButton, Stack, Typography, useTheme } from "@mui/material";
+"use client";
+import React from "react";
+import { Box, Button, Container, IconButton, Paper, Rating, Stack, Typography, useTheme } from "@mui/material";
 import style from "../../styles/home.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import Carousel from "react-material-ui-carousel";
 
 const Reviews = () => {
   const theme = useTheme();
+  var items = [
+    {
+      name: "Siam Ahemd"
+    },
+    {
+      name: "Angelina Angel"
+    },
+  ];
   return (
     <Container
       maxWidth="xl"
       className={style.setBgInReview}
       sx={{
-        my: { md: 10, xs: 0 },
+        my: { md: 10, xs: 5 },
         py: { md: 10, xs: 5 },
       }}
     >
@@ -21,46 +33,42 @@ const Reviews = () => {
         See What Our Clients Says
       </Typography>
       <Stack direction="row" spacing={3} alignItems="center" justifyContent="center">
-        <IconButton>
-          <Stack
-            alignItems="center"
-            justifyContent="center"
-            padding={1}
-            borderRadius="50%"
-            border={`1px solid ${theme.palette.textColorForBgSecondary.main}`}
-            sx={{
-              transition: ".3s ease-in-out",
-              ":hover": {
-                border: `1px solid ${theme.palette.secondary.main}`,
-                backgroundColor: theme.palette.secondary.main,
-              },
-            }}
-          >
-            <KeyboardDoubleArrowLeftIcon sx={{ color: theme.palette.textColorForBgSecondary.main, fontSize: "30px" }} />
-          </Stack>
-        </IconButton>
-        <div>slider Main</div>
-        <IconButton>
-          <Stack
-            alignItems="center"
-            justifyContent="center"
-            padding={1}
-            borderRadius="50%"
-            border={`1px solid ${theme.palette.textColorForBgSecondary.main}`}
-            sx={{
-              transition: ".3s ease-in-out",
-              ":hover": {
-                border: `1px solid ${theme.palette.secondary.main}`,
-                backgroundColor: theme.palette.secondary.main,
-              },
-            }}
-          >
-            <KeyboardDoubleArrowRightIcon sx={{ color: theme.palette.textColorForBgSecondary.main, fontSize: "30px" }} />
-          </Stack>
-        </IconButton>
+        <Carousel
+          sx={{ width: {lg:"75%" , md: "90%" , xs: "100%"} }}
+          NextIcon={<KeyboardDoubleArrowRightIcon sx={{ color: theme.palette.secondary.main, fontSize: "30px" }} />}
+          PrevIcon={<KeyboardDoubleArrowLeftIcon sx={{ color: theme.palette.secondary.main, fontSize: "30px" }} />}
+        >
+          {items.map((item, i) => (
+            <SliderItem key={i} name={item}/>
+          ))}
+        </Carousel>
       </Stack>
     </Container>
   );
 };
 
 export default Reviews;
+
+function SliderItem({name}) {
+  const theme = useTheme();
+  return (
+    <Box sx={{ minHeight: "400px", px: {md: 12 , xs: 0}, py: {md: 6 , xs: 3}}}>
+      <Stack direction="row" justifyContent="center">
+        <ReviewsIcon sx={{ fontSize: "100px", color: theme.palette.secondary.main }} />
+      </Stack>
+      <Typography textAlign="center" color={theme.palette.textColorForBgSecondary.main} fontWeight="600" fontSize="20px" marginTop={{md: 2 , xs: 1}}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio excepturi atque consectetur accusantium ipsum explicabo repellendus ipsa
+        assumenda quibusdam, voluptatibus odio laborum eaque nemo. Tempora!
+      </Typography>
+      <Stack direction="row" justifyContent="center" marginTop={{md: 2 , xs: 1}}>
+        <Rating name="read-only" value={5} readOnly sx={{ color: theme.palette.secondary.main }} />
+      </Stack>
+      <Typography textAlign="center" color={theme.palette.textColorForBgSecondary.main} fontWeight="700" fontSize="25px" marginTop={{md: 2 , xs: 1}}>
+        {name.name}
+      </Typography>
+      <Typography textAlign="center" color={theme.palette.textColorForBgSecondary.lightWhite} fontWeight="700" fontSize="15px">
+        Jatrabari , Dhaka
+      </Typography>
+    </Box>
+  );
+}
