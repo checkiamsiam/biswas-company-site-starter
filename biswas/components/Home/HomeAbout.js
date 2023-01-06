@@ -1,6 +1,6 @@
 import { Box, Container, Grid,  Stack, Tab,  Typography, useTheme } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import aboutImage from "../../assets/images/StockSnap_MJZPCHLERD-compressed.jpg";
+import aboutImage from "../../assets/images/danial-igdery-FCHlYvR5gJI-unsplash.jpg";
 import Image from "next/image";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { useState } from "react";

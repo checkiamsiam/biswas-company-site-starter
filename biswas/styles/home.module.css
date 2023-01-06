@@ -13,7 +13,13 @@
 }
 
 .setBgInReview{
-  background-image: url("../assets/images/ReviewBd.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.89) , rgba(0 ,0, 0, 0.815) ) , url("../assets/images/happyclient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.setBgInFooter{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.89) , rgba(0 ,0, 0, 0.815) ) , url("../assets/images/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

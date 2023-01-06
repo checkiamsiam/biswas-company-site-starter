@@ -24,6 +24,7 @@ export default function Home() {
       <HomeBlog />
       <OurApproach/>
       <Reviews />
+      <HomeBlog />
     </>
   );
 }

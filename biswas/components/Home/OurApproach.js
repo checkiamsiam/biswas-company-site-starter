@@ -6,7 +6,7 @@ import approachImg from "../../assets/images/approach.png";
 
 const OurApproach = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Typography
         component="p"
         sx={{
@@ -30,7 +30,7 @@ const OurApproach = () => {
       >
         To Enhance Your Cyber Defences Expert <br /> Will Support
       </Typography>
-      <Grid container spacing={2} >
+      <Grid container spacing={5} >
         <Grid item lg={6} sx={{ my: 4 }}>
           <Image
             style={{ width: "100%", height: "100%" }}
