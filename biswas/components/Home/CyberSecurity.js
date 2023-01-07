@@ -1,36 +1,26 @@
-import { Card, Container, Grid, Typography } from "@mui/material";
+import { Card, Container, Grid, Stack, Typography, useTheme } from "@mui/material";
 import React from "react";
 import securtyImage from "../../assets/images/protect.png";
 import Image from "next/image";
 import { Box } from "@mui/system";
-import {
-  AiOutlineDatabase,
-  AiOutlineCloudServer,
-  AiOutlineSecurityScan,
-} from "react-icons/ai";
+import { AiOutlineDatabase, AiOutlineCloudServer, AiOutlineSecurityScan } from "react-icons/ai";
 import { MdOutlineSecurity } from "react-icons/md";
 
 const CyberSecurity = () => {
+  const theme = useTheme();
   return (
-    <Container maxWidth="xl">
-      <Grid container spacing={2} sx={{ p: "70px" }}>
-        <Grid item lg={6} md={12} xs={12} sx={{ px: 3 }}>
-          <Typography
-            component="p"
-            sx={{ color: "#e21f36", fontWeight: "600", mb: 3 }}
-          >
+    <Container maxWidth="xl" sx={{mt: 5}}>
+      <Stack direction={{lg: "row" , xs: "column-reverse"}}  spacing={2} >
+        <Grid width={{lg: "50%" , xs: "100%"}} sx={{ py: {lg: 5 , xs: 0} }}>
+          <Typography color={theme.palette.secondary.main} fontWeight="700" fontSize="15px">
             Cyber Security Protect
           </Typography>
-          <Typography
-            sx={{ fontSize: "30px", fontWeight: "700" }}
-            component="h4"
-            variant="h4"
-          >
-            Protect Your Website, Web Server, and Web Application for Helping
-            You Being Threats From The Hacker
+          <Typography color={theme.palette.primary.main} fontWeight="700" fontSize={{ md: "30px", xs: "25px" }}>
+            Protect Your Website, Web Server, and Web Application for Helping You Being Threats From The Hacker
           </Typography>
-          <Grid container sx={{ my: 3 }} spacing={4}>
-            <Grid item lg={6} md={12} xs={12}>
+
+          <Grid container sx={{ my: {lg: 2 , xs: "0px"}}} spacing={4}>
+            <Grid item md={6} xs={12}>
               <Card
                 sx={{
                   backgroundRepeat: "no-repeat",
@@ -46,22 +36,18 @@ const CyberSecurity = () => {
                     position: "absolute",
                     top: 0,
                     left: 0,
-                    
+
                     borderRadius: "inherit",
                   },
                   ":hover": {
                     transition: "all 0.3s ease-in-out",
                     transform: `translateY(-5px)`,
-                    boxShadow:  "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
                   },
                   boxShadow: " rgba(149, 157, 165, 0.2) 0px 8px 24px",
                 }}
               >
-                <Typography
-                  sx={{ textAlign: "center", color: "#e21f36" }}
-                  component="h3"
-                  variant="h3"
-                >
+                <Typography sx={{ textAlign: "center", color: theme.palette.secondary.main }} component="h3" variant="h3">
                   <AiOutlineDatabase />
                 </Typography>
                 <Typography
@@ -84,15 +70,14 @@ const CyberSecurity = () => {
                   }}
                   component="p"
                 >
-                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                  do.
+                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.
                 </Typography>
               </Card>
             </Grid>
-            <Grid item lg={6} md={12} xs={12}>
+            <Grid item  md={6} xs={12}>
               <Card
                 sx={{
-                  backgroundColor: "#e21f36",
+                  backgroundColor: theme.palette.secondary.main,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                   transition: "all 0.3s ease-in-out",
@@ -106,22 +91,18 @@ const CyberSecurity = () => {
                     position: "absolute",
                     top: 0,
                     left: 0,
-                    
+
                     borderRadius: "inherit",
                   },
                   ":hover": {
                     transition: "all 0.3s ease-in-out",
                     transform: `translateY(-5px)`,
-                    boxShadow:  "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
                   },
                   boxShadow: " rgba(149, 157, 165, 0.2) 0px 8px 24px",
                 }}
               >
-                <Typography
-                  sx={{ textAlign: "center", color: "white" }}
-                  component="h3"
-                  variant="h3"
-                >
+                <Typography sx={{ textAlign: "center", color: "white" }} component="h3" variant="h3">
                   <MdOutlineSecurity />
                 </Typography>
                 <Typography
@@ -145,15 +126,14 @@ const CyberSecurity = () => {
                   }}
                   component="p"
                 >
-                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                  do.
+                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.
                 </Typography>
               </Card>
             </Grid>
-            <Grid item lg={6} md={12} xs={12}>
+            <Grid item  md={6} xs={12}>
               <Card
                 sx={{
-                  backgroundColor: "#e21f36",
+                  backgroundColor: theme.palette.secondary.main,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                   transition: "all 0.3s ease-in-out",
@@ -172,16 +152,12 @@ const CyberSecurity = () => {
                   ":hover": {
                     transition: "all 0.3s ease-in-out",
                     transform: `translateY(-5px)`,
-                    boxShadow:  "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
                   },
                   boxShadow: " rgba(149, 157, 165, 0.2) 0px 8px 24px",
                 }}
               >
-                <Typography
-                  sx={{ textAlign: "center", color: "white" }}
-                  component="h3"
-                  variant="h3"
-                >
+                <Typography sx={{ textAlign: "center", color: "white" }} component="h3" variant="h3">
                   <AiOutlineCloudServer />
                 </Typography>
                 <Typography
@@ -205,12 +181,11 @@ const CyberSecurity = () => {
                   }}
                   component="p"
                 >
-                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                  do.
+                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.
                 </Typography>
               </Card>
             </Grid>
-            <Grid item lg={6} md={12} xs={12}>
+            <Grid item  md={6} xs={12}>
               <Card
                 sx={{
                   backgroundRepeat: "no-repeat",
@@ -226,22 +201,18 @@ const CyberSecurity = () => {
                     position: "absolute",
                     top: 0,
                     left: 0,
-                    
+
                     borderRadius: "inherit",
                   },
                   ":hover": {
                     transition: "all 0.3s ease-in-out",
                     transform: `translateY(-5px)`,
-                    boxShadow:  "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
                   },
                   boxShadow: " rgba(149, 157, 165, 0.2) 0px 8px 24px",
                 }}
               >
-                <Typography
-                  sx={{ textAlign: "center", color: "#e21f36" }}
-                  component="h3"
-                  variant="h3"
-                >
+                <Typography sx={{ textAlign: "center", color: theme.palette.secondary.main }} component="h3" variant="h3">
                   <AiOutlineSecurityScan />
                 </Typography>
                 <Typography
@@ -264,23 +235,16 @@ const CyberSecurity = () => {
                   }}
                   component="p"
                 >
-                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                  do.
+                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.
                 </Typography>
               </Card>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item lg={6} md={12} xs={12}>
-          <Box>
-            <Image
-              style={{ width: "100%", height: "100%" }}
-              src={securtyImage}
-              alt="securtyImage"
-            />
-          </Box>
-        </Grid>
-      </Grid>
+        <Box width={{lg: "50%" , xs: "100%"}}  sx={{ p: {lg: 5 , xs: 0} }}>
+            <Image style={{ width: "100%", height: "100%" }} src={securtyImage} alt="securtyImage" />
+        </Box>
+      </Stack>
     </Container>
   );
 };
